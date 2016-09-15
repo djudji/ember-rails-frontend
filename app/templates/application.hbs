@@ -2,7 +2,11 @@
   <div class="container">
     {{#link-to 'application' class='navbar-brand'}}Ember Rails Application{{/link-to}}
     <div class="pull-sm-right">
-      {{!-- Login/Logout buttons --}}
+     {{#if session.isAuthenticated}}
+       <button class="btn btn-secondary-online"{{action "logout"}}>Logout</button>
+     {{else}}
+       <button class="btn btn-secondary-online"{{action "login"}}>Login</button>
+     {{/if}} {{!-- Login/Logout buttons --}}
     </div>
   </div>
 </nav>
@@ -33,6 +37,6 @@
   {{outlet}}
   </section>
   <aside class="col-sm-3">
-  {{!-- Task list etc. --}}
+    {{!-- Task list etc. --}}
   </aside>
 </div>
