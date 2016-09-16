@@ -1,3 +1,4 @@
+### location: app/authenticators ###
 `import Ember from 'ember'`
 `import ToriiAuthenticator from 'ember-simple-auth/authenticators/torii'`
 `import ENV from 'relationship/config/environment'`

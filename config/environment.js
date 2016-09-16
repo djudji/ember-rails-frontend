@@ -1,4 +1,5 @@
 /* jshint node: true */
+require('dotenv').load();
 
 module.exports = function(environment) {
   var ENV = {
@@ -21,11 +22,11 @@ module.exports = function(environment) {
       providers: {
         'google-oauth2': {
           redirectUri: 'http://localhost:4200/oauth2callback',
-          apiKey: process.env
+          apiKey: process.env.GOOGLE_CLIENT_ID
         }
       }
     },
-    apiHost: 'http://localhost:3000/api'
+    apiHost: 'http://localhost:3000'
   };
 
   if (environment === 'development') {
