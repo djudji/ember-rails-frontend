@@ -19,7 +19,7 @@
           {{#link-to 'application' class='nav-link'}}Contacts{{/link-to}}
         </li>
         <li class="nav-item">
-          {{#link-to 'application' class='nav-link'}}Companies{{/link-to}}
+          {{#link-to 'companies' class='nav-link'}}Companies{{/link-to}}
         </li>
         <li class="nav-item">
           {{#link-to 'application' class='nav-link'}}Projects{{/link-to}}
@@ -32,10 +32,13 @@
         </li>
       </ul>
     </nav>
+
+    <section id="main" class="col-sm-7">
+    {{outlet}}
+    </section>
+
   </div>
-  <section id="main" class="col-sm-7">
-  {{outlet}}
-  </section>
+
   <aside class="col-sm-3">
     {{!-- Task list etc. --}}
   </aside>

@@ -26,7 +26,17 @@ module.exports = function(environment) {
         }
       }
     },
-    apiHost: 'http://localhost:3000'
+    apiHost: 'http://localhost:3000',
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self'",
+      'content-src': "'self' http://localhost:3000",
+      'img-src': "'self'",
+      'style-src': "'self'",
+      'media-src': "'self'",
+    }
   };
 
   if (environment === 'development') {

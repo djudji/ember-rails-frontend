@@ -1,7 +1,7 @@
 ### location: app/authenticators ###
 `import Ember from 'ember'`
 `import ToriiAuthenticator from 'ember-simple-auth/authenticators/torii'`
-`import ENV from 'relationship/config/environment'`
+`import ENV from 'backend/config/environment'`
 
 GoogleAuthenticator = ToriiAuthenticator.extend
   torii: Ember.inject.service()
